@@ -2,6 +2,26 @@ require 'rake'
 require 'rake/testtask'
 require 'rake/rdoctask'
 
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |gem|
+    gem.name = "more"
+    gem.summary = "LESS on Rails"
+    gem.description = <<-EOS
+      More is a plugin for Ruby on Rails applications. It automatically
+    	parses your applications .less files through LESS and outputs CSS files.
+    EOS
+    gem.authors = ["August Lilleaas", "Logan Raarup"]
+    gem.files =  FileList["README.markdown", "MIT-LICENSE", "Rakefile", "init.rb", "lib/*.rb", "rails/init.rb", "tasks/*", "test/*"]
+    gem.has_rdoc
+    
+    gem.add_dependency 'less'
+  end
+  Jeweler::GemcutterTasks.new
+rescue LoadError
+  puts "Jeweler (or a dependency) not available. Install it with: sudo gem install jeweler"
+end
+
 desc 'Default: run unit tests.'
 task :default => :test
 
