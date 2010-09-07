@@ -8,26 +8,31 @@ Gem::Specification.new do |s|
   s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Alexis Sellier"]
+  s.authors = ["August Lilleaas", "Logan Raarup"]
   s.date = %q{2010-09-07}
-  s.description = %q{In details, More does the following:
-    * Recursively looks for LESS (`.less`) files in `app/stylesheets`
-    * Ignores partials (prefixed with underscore: `_partial.less`) - these can be included with `@import` in your LESS files
-    * Saves the resulting CSS files to `public/stylesheets` using the same directory structure as `app/stylesheets`}
+  s.description = %q{      More is a plugin for Ruby on Rails applications. It automatically
+    	parses your applications .less files through LESS and outputs CSS files.
+}
   s.extra_rdoc_files = [
     "README.markdown"
   ]
   s.files = [
-    "lib/less/controller_extension.rb",
+    "MIT-LICENSE",
+     "README.markdown",
+     "Rakefile",
+     "init.rb",
+     "lib/less/controller_extension.rb",
      "lib/less/more.rb",
      "lib/tasks/more_tasks.rake",
-     "rails/init.rb"
+     "rails/init.rb",
+     "test/controller_test.rb",
+     "test/more_test.rb",
+     "test/test_helper.rb"
   ]
-  s.homepage = %q{http://github.com/cloudhead/more}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
-  s.summary = %q{More is a plugin for Ruby on Rails applications. It automatically parses your applications `.less` files through LESS and outputs CSS files.}
+  s.summary = %q{LESS on Rails}
   s.test_files = [
     "test/controller_test.rb",
      "test/more_test.rb",

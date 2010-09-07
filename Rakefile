@@ -12,7 +12,7 @@ begin
     	parses your applications .less files through LESS and outputs CSS files.
     EOS
     gem.authors = ["August Lilleaas", "Logan Raarup"]
-    gem.files =  FileList["README.markdown", "MIT-LICENSE", "Rakefile", "init.rb", "lib/*.rb", "rails/init.rb", "tasks/*", "test/*"]
+    gem.files =  FileList["README.markdown", "MIT-LICENSE", "Rakefile", "init.rb", "lib/**/*", "rails/init.rb", "test/**/*"]
     gem.has_rdoc
     
     gem.add_dependency 'less'
